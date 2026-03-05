@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Capital de Francia?",
+    "opciones": ["Madrid", "París", "Roma"],
+    "correcta": 1
+  },
+  {
+    "id": 2,
+    "pregunta": "¿2 + 2?",
+    "opciones": ["3", "4", "5"],
+    "correcta": 1
+  }
+]
