@@ -1,40 +1,54 @@
-import { useState } from "react";
-import Inicio from "./componentes/Inicio/inicio";
-import Partida from "./componentes/Partida/partida";
+import React, { useState } from "react";
+import SolicitarNombre from "./componentes/solicitarNombre";
+import Partida from "./componentes/partida";
+import Historial from "./componentes/historial";
 
 function App() {
 
-  const [jugador, setJugador] = useState(null);
-  const [resultado, setResultado] = useState(null);
+  const [pantalla, setPantalla] = useState("menu");
+  const [nombre, setNombre] = useState("");
 
-  const iniciarJuego = (nombre) => {
-    setJugador(nombre);
-  };
+  if (pantalla === "menu") {
+    return (
+      <div>
+        <h1>Preguntados</h1>
 
-  const finalizarJuego = (aciertos) => {
-    setResultado(aciertos);
-  };
+        <button onClick={() => setPantalla("nombre")}>
+          Jugar
+        </button>
 
-  if (!jugador) {
-    return <Inicio iniciarJuego={iniciarJuego} />;
+        <button onClick={() => setPantalla("historial")}>
+          Ver Historial
+        </button>
+      </div>
+    );
   }
 
-  if (resultado === null) {
+  if (pantalla === "nombre") {
     return (
-      <Partida
-        jugador={jugador}
-        finalizarJuego={finalizarJuego}
+      <SolicitarNombre
+        iniciar={(n) => {
+          setNombre(n);
+          setPantalla("juego");
+        }}
       />
     );
   }
 
-  return (
-    <div>
-      <h2>Juego terminado</h2>
-      <p>Aciertos: {resultado}</p>
-    </div>
-  );
+  if (pantalla === "juego") {
+    return (
+      <Partida
+        nombre={nombre}
+        volverMenu={() => setPantalla("menu")}
+      />
+    );
+  }
 
+  if (pantalla === "historial") {
+    return (
+      <Historial volverMenu={() => setPantalla("menu")} />
+    );
+  }
 }
 
 export default App;

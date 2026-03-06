@@ -1,32 +1,32 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-function Inicio({ iniciarJuego }) {
+function SolicitarNombre({ iniciar }) {
 
   const [nombre, setNombre] = useState("");
 
-  const manejarInicio = () => {
+  function enviar() {
     if (nombre.trim() !== "") {
-      iniciarJuego(nombre);
+      iniciar(nombre);
     }
-  };
+  }
 
   return (
     <div>
+
       <h2>Ingrese su nombre</h2>
 
       <input
         type="text"
-        placeholder="Nombre"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
       />
 
-      <button onClick={manejarInicio}>
-        Iniciar Juego
+      <button onClick={enviar}>
+        Comenzar
       </button>
 
     </div>
   );
 }
 
-export default Inicio;
+export default SolicitarNombre;
