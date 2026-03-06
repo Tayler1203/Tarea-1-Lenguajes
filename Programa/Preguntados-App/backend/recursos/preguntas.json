@@ -7,8 +7,146 @@
   },
   {
     "id": 2,
-    "pregunta": "¿2 + 2?",
+    "pregunta": "¿Cuánto es 2 + 2?",
     "opciones": ["3", "4", "5"],
     "correcta": 1
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Planeta rojo del sistema solar?",
+    "opciones": ["Marte", "Venus", "Júpiter"],
+    "correcta": 0
+  },
+  {
+    "id": 4,
+    "pregunta": "¿Lenguaje principal para páginas web?",
+    "opciones": ["HTML", "Python", "C++"],
+    "correcta": 0
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Cuántos continentes hay?",
+    "opciones": ["5", "6", "7"],
+    "correcta": 2
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Capital de Japón?",
+    "opciones": ["Tokio", "Seúl", "Pekín"],
+    "correcta": 0
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Quién pintó la Mona Lisa?",
+    "opciones": ["Picasso", "Da Vinci", "Van Gogh"],
+    "correcta": 1
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Gas que respiramos principalmente?",
+    "opciones": ["Oxígeno", "Hidrógeno", "Helio"],
+    "correcta": 0
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Cuántos lados tiene un triángulo?",
+    "opciones": ["3", "4", "5"],
+    "correcta": 0
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Capital de España?",
+    "opciones": ["Madrid", "Barcelona", "Valencia"],
+    "correcta": 0
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Animal más grande del planeta?",
+    "opciones": ["Elefante", "Ballena azul", "Jirafa"],
+    "correcta": 1
+  },
+  {
+    "id": 12,
+    "pregunta": "¿Lenguaje usado en Node.js?",
+    "opciones": ["Java", "JavaScript", "Python"],
+    "correcta": 1
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Metal cuyo símbolo es Fe?",
+    "opciones": ["Hierro", "Plata", "Oro"],
+    "correcta": 0
+  },
+  {
+    "id": 14,
+    "pregunta": "¿Cuántos días tiene una semana?",
+    "opciones": ["5", "7", "10"],
+    "correcta": 1
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Capital de Italia?",
+    "opciones": ["Roma", "Milán", "Venecia"],
+    "correcta": 0
+  },
+  {
+    "id": 16,
+    "pregunta": "¿Océano más grande?",
+    "opciones": ["Atlántico", "Índico", "Pacífico"],
+    "correcta": 2
+  },
+  {
+    "id": 17,
+    "pregunta": "¿Animal conocido como rey de la selva?",
+    "opciones": ["León", "Tigre", "Jaguar"],
+    "correcta": 0
+  },
+  {
+    "id": 18,
+    "pregunta": "¿Instrumento con teclas blancas y negras?",
+    "opciones": ["Guitarra", "Piano", "Violín"],
+    "correcta": 1
+  },
+  {
+    "id": 19,
+    "pregunta": "¿Cuántos meses tiene un año?",
+    "opciones": ["10", "12", "14"],
+    "correcta": 1
+  },
+  {
+    "id": 20,
+    "pregunta": "¿Capital de Alemania?",
+    "opciones": ["Berlín", "Hamburgo", "Múnich"],
+    "correcta": 0
+  },
+  {
+    "id": 21,
+    "pregunta": "¿Cuál es el planeta más grande?",
+    "opciones": ["Júpiter", "Saturno", "Neptuno"],
+    "correcta": 0
+  },
+  {
+    "id": 22,
+    "pregunta": "¿Cuánto es 10 x 5?",
+    "opciones": ["50", "40", "60"],
+    "correcta": 0
+  },
+  {
+    "id": 23,
+    "pregunta": "¿Lenguaje usado para estilos web?",
+    "opciones": ["HTML", "CSS", "SQL"],
+    "correcta": 1
+  },
+  {
+    "id": 24,
+    "pregunta": "¿Capital de Canadá?",
+    "opciones": ["Toronto", "Ottawa", "Vancouver"],
+    "correcta": 1
+  },
+  {
+    "id": 25,
+    "pregunta": "¿Cuántos minutos tiene una hora?",
+    "opciones": ["60", "100", "30"],
+    "correcta": 0
   }
 ]
