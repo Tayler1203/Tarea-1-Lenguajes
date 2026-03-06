@@ -17,7 +17,7 @@ function Historial({ volverMenu }) {
 
       {historial.map((p, i) => (
         <div key={i}>
-          {p.nombre} - {p.puntaje} puntos - {p.fecha}
+          {p.nombre} - {p.puntaje} aciertos - {p.estado} - {p.fecha}
         </div>
       ))}
 

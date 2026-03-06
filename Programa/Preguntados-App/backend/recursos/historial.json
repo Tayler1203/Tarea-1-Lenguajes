@@ -42,5 +42,23 @@
     "nombre": "Allan",
     "puntaje": 0,
     "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Miguel",
+    "puntaje": 0,
+    "estado": "Perdió",
+    "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Parras",
+    "puntaje": 0,
+    "estado": "Perdió",
+    "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Hector",
+    "puntaje": 6,
+    "estado": "Ganó",
+    "fecha": "6/3/2026"
   }
 ]
