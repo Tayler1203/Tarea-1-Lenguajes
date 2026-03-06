@@ -4,22 +4,23 @@ import Partida from "./componentes/partida";
 import Historial from "./componentes/historial";
 
 function App() {
-
   const [pantalla, setPantalla] = useState("menu");
   const [nombre, setNombre] = useState("");
 
   if (pantalla === "menu") {
     return (
-      <div>
+      <div className="card">
+        <p className="subtitle">Juego de trivia</p>
         <h1>Preguntados</h1>
-
-        <button onClick={() => setPantalla("nombre")}>
-          Jugar
-        </button>
-
-        <button onClick={() => setPantalla("historial")}>
-          Ver Historial
-        </button>
+        <p>Responde 10 preguntas y demuestra cuánto sabes ¡Acierta 6 o más para ganar!</p>
+        <div className="menu-buttons">
+          <button className="btn-primary" onClick={() => setPantalla("nombre")}>
+            Jugar
+          </button>
+          <button className="btn-secondary" onClick={() => setPantalla("historial")}>
+            Ver Historial
+          </button>
+        </div>
       </div>
     );
   }
@@ -31,6 +32,7 @@ function App() {
           setNombre(n);
           setPantalla("juego");
         }}
+        volverMenu={() => setPantalla("menu")}
       />
     );
   }

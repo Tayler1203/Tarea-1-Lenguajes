@@ -60,5 +60,29 @@
     "puntaje": 6,
     "estado": "Ganó",
     "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Ian",
+    "puntaje": 9,
+    "estado": "Ganó",
+    "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Juan",
+    "puntaje": 3,
+    "estado": "Perdió",
+    "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Tartamunding",
+    "puntaje": 6,
+    "estado": "Ganó",
+    "fecha": "6/3/2026"
+  },
+  {
+    "nombre": "Pablo",
+    "puntaje": 6,
+    "estado": "Ganó",
+    "fecha": "6/3/2026"
   }
 ]

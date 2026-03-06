@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
 function Partida({ nombre, volverMenu }) {
-
   const [preguntas, setPreguntas] = useState([]);
   const [indice, setIndice] = useState(0);
   const [puntaje, setPuntaje] = useState(0);
@@ -17,13 +16,18 @@ function Partida({ nombre, volverMenu }) {
   }, []);
 
   if (preguntas.length === 0) {
-    return <h2>Cargando preguntas...</h2>;
+    return (
+      <div className="card">
+        <p className="subtitle">Cargando...</p>
+        <h2>Preparando preguntas</h2>
+      </div>
+    );
   }
 
   const preguntaActual = preguntas[indice];
+  const progreso = ((indice) / preguntas.length) * 100;
 
   function responder(opcion) {
-
     const indiceElegido = preguntaActual.opciones.indexOf(opcion);
 
     if (indiceElegido === preguntaActual.correcta) {
@@ -36,8 +40,6 @@ function Partida({ nombre, volverMenu }) {
     if (siguiente < preguntas.length) {
       setIndice(siguiente);
     } else {
-
-      // Capturar valor ANTES de cualquier setState
       const finalScore = puntajeRef.current;
       const estado = finalScore >= 6 ? "Ganó" : "Perdió";
 
@@ -45,13 +47,11 @@ function Partida({ nombre, volverMenu }) {
       setTerminado(true);
 
       const resultado = {
-        nombre: nombre,
+        nombre,
         puntaje: finalScore,
-        estado: estado,
+        estado,
         fecha: new Date().toLocaleDateString()
       };
-
-      console.log("Enviado al servidor:", resultado);
 
       fetch("http://localhost:3001/historial", {
         method: "POST",
@@ -62,29 +62,38 @@ function Partida({ nombre, volverMenu }) {
   }
 
   if (terminado) {
-    const estado = puntajeFinal >= 6 ? "Ganó" : "Perdió";
+    const gano = puntajeFinal >= 6;
     return (
-      <div>
-        <h2>Juego terminado</h2>
-        <p>Jugador: {nombre}</p>
-        <p>Puntaje: {puntajeFinal} / {preguntas.length}</p>
-        <p>Estado: {estado}</p>
-        <button onClick={volverMenu}>Volver al menú</button>
+      <div className="card">
+        <p className="subtitle">Resultado final</p>
+        <div className="result-number">{puntajeFinal}<span style={{ fontSize: "1.5rem", color: "var(--muted)" }}>/10</span></div>
+        <p className="result-label">aciertos</p>
+        <p>Jugador: <strong style={{ color: "var(--text)" }}>{nombre}</strong></p>
+        <p>Estado: <span className={gano ? "estado-gano" : "estado-perdio"}>{gano ? "Ganó 🎉" : "Perdió"}</span></p>
+        <hr className="divider" />
+        <button className="btn-primary" onClick={volverMenu}>
+          Volver al menú
+        </button>
       </div>
     );
   }
 
   return (
-    <div>
-      <h2>Jugador: {nombre}</h2>
-      <p>Puntaje actual: {puntaje}</p>
+    <div className="card">
+      <p className="subtitle">{nombre}</p>
+      <div className="progress-bar">
+        <div className="progress-fill" style={{ width: `${progreso}%` }} />
+      </div>
+      <div className="score-badge">Puntaje: {puntaje}</div>
       <h3>{preguntaActual.pregunta}</h3>
       {preguntaActual.opciones.map((opcion, i) => (
-        <button key={i} onClick={() => responder(opcion)}>
+        <button key={i} className="btn-option" onClick={() => responder(opcion)}>
           {opcion}
         </button>
       ))}
-      <p>Pregunta {indice + 1} de {preguntas.length}</p>
+      <p style={{ marginTop: "1rem", textAlign: "right" }}>
+        Pregunta {indice + 1} de {preguntas.length}
+      </p>
     </div>
   );
 }
