@@ -1,5 +1,25 @@
 import React, { useState } from "react";
 
+/*
+Nombre: SolicitarNombre
+
+Entradas:
+- iniciar: función que inicia la partida con el nombre del jugador.
+- volverMenu: función para regresar al menú principal.
+
+Salidas:
+- Muestra un formulario para que el jugador ingrese su nombre.
+
+Restricciones:
+- El nombre no puede estar vacío.
+
+Descripción:
+Este componente solicita al usuario ingresar su nombre antes de comenzar
+la partida. Cuando el jugador escribe su nombre y presiona el botón
+"Comenzar" o la tecla Enter, se inicia el juego. También incluye un
+botón para regresar al menú principal.
+*/
+
 function SolicitarNombre({ iniciar, volverMenu }) {
   const [nombre, setNombre] = useState("");
 

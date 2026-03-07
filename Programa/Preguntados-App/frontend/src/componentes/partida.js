@@ -1,4 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
+/*
+Nombre: Partida
+
+Entradas:
+- nombre: nombre del jugador.
+- volverMenu: función para regresar al menú principal.
+
+Salidas:
+- Muestra las preguntas del juego, permite responderlas y muestra el puntaje final.
+
+Restricciones:
+- El backend debe estar disponible en http://localhost:3001.
+
+Descripción:
+Este componente controla el desarrollo de una partida del juego.
+Carga las preguntas desde el backend, muestra cada pregunta con sus
+opciones y actualiza el puntaje según las respuestas correctas.
+Al finalizar, muestra el resultado del jugador y guarda el resultado
+en el historial.
+*/
 
 function Partida({ nombre, volverMenu }) {
   const [preguntas, setPreguntas] = useState([]);

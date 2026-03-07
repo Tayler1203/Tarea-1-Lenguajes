@@ -3,6 +3,26 @@ import SolicitarNombre from "./componentes/solicitarNombre";
 import Partida from "./componentes/partida";
 import Historial from "./componentes/historial";
 
+/*
+Nombre: App
+
+Entradas:
+- No recibe parámetros directos.
+
+Salidas:
+- Muestra las diferentes pantallas de la aplicación (menú, juego, nombre e historial).
+
+Restricciones:
+- Los componentes SolicitarNombre, Partida y Historial deben existir.
+
+Descripción:
+Este componente controla la navegación principal de la aplicación.
+Dependiendo del estado "pantalla", muestra el menú principal,
+la pantalla para ingresar el nombre del jugador, la partida
+o el historial de juegos. También guarda el nombre del jugador
+para usarlo durante la partida.
+*/
+
 function App() {
   const [pantalla, setPantalla] = useState("menu");
   const [nombre, setNombre] = useState("");

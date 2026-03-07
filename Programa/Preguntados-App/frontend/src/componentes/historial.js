@@ -1,5 +1,23 @@
 import React, { useEffect, useState } from "react";
 
+/*
+Nombre: Historial
+
+Entradas:
+- volverMenu: función para regresar al menú principal.
+
+Salidas:
+- Muestra el historial de partidas registradas.
+
+Restricciones:
+- El backend debe estar disponible para obtener los datos.
+
+Descripción:
+Este componente obtiene desde el backend la lista de partidas jugadas
+y las muestra en pantalla con el nombre del jugador, fecha, puntaje
+y estado (ganó o perdió). También incluye un botón para volver al menú.
+*/
+
 function Historial({ volverMenu }) {
   const [historial, setHistorial] = useState([]);
 
